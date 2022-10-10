@@ -29,8 +29,9 @@ function App(props) {
   }, [images]);
   const handleUpload = () => {
     console.log('Uploading files....');
+    console.log('images, uploaded files', images);
     axios
-      .post('/api/upload', { images })
+      .post('http://localhost:4000/api/upload', { images })
       .then((response) => console.log(response.data))
       .catch((error) => console.log(error.message));
   };

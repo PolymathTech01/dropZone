@@ -32,8 +32,8 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 @ http://localhost:${PORT}`));
-const public_id = 3;
-cloudinary.uploader
-  .destroy(public_id)
-  .then((res) => console.log('res', res))
-  .catch((error) => console.log('err', error.message));
+// const public_id = 3;
+// cloudinary.uploader
+//   .destroy(public_id)
+//   .then((res) => console.log('res', res))
+//   .catch((error) => console.log('err', error.message));

@@ -1,3 +1,5 @@
+const { response } = require('express');
+
 const router = require('express').Router();
 const cloudinary = require('cloudinary').v2;
 require('dotenv').config();
@@ -25,7 +27,9 @@ router.post('/upload', async (req, res, next) => {
     const response = await Promise.all(promises);
     res.send(response);
   } catch (error) {
-    next(error);
+    res.send({
+      message: error,
+    });
   }
 });
 
